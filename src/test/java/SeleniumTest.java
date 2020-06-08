@@ -1,19 +1,56 @@
-import static org.junit.Assert.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertTrue;
+
 public class SeleniumTest {
+
     @Test
-    public void site_header_is_on_home_page() {
-        WebDriver browser;
-        //Firefox's geckodriver *requires* you to specify its location.
-        System.setProperty("webdriver.gecko.driver", "D:\\jars\\geckodriver.exe");
-        browser = new FirefoxDriver();
-        browser.get("http://saucelabs.com");
-        WebElement header = browser.findElement(By.id("site-header"));
-        assertTrue((header.isDisplayed()));
-        browser.close();
+    public void check_title_Chrome() {
+        System.setProperty("webdriver.chrome.driver","D:\\jars\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+
+        String baseUrl = "http://demo.guru99.com/test/newtours/";
+        String expectedTitle = "Welcome: Mercury Tours";
+        String actualTitle = "";
+
+        driver.get(baseUrl);
+
+        actualTitle = driver.getTitle();
+
+        if (actualTitle.contentEquals(expectedTitle)){
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed");
+        }
+
+        driver.close();
+    }
+
+    @Test
+    public void check_title_Firefox() {
+
+        System.setProperty("webdriver.gecko.driver","D:\\jars\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+
+        String baseUrl = "http://demo.guru99.com/test/newtours/";
+        String expectedTitle = "Welcome: Mercury Tours";
+        String actualTitle = "";
+
+        driver.get(baseUrl);
+
+        actualTitle = driver.getTitle();
+
+        if (actualTitle.contentEquals(expectedTitle)){
+            System.out.println("Test Passed!");
+        } else {
+            System.out.println("Test Failed");
+        }
+
+        driver.close();
+
     }
 }
