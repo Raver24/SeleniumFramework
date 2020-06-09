@@ -6,23 +6,35 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="CheckTitle" />
+            <class name="PrepareTesting" />
+            <!--<class name="CheckTitle" />
             <class name="FindElement" />
             <class name="FindElements" />
             <class name="Form" />
                 <parameter name="address" value= "abcd@gmail.com" />
                 <parameter name="passwd" value= "abcdefghlkjl" />
+            <class name="RadioCheckBox" />
+            <class name="ImageClick" />
+            <class name="DropDown" />
+            <class name="LinkText" />-->
+            <class name="MouseKeyboardEvent" />
         </classes>
     </test>
     <test name="ChromeTest">
         <parameter name="browser" value= "chrome" />
         <classes>
-            <class name="CheckTitle" />
+            <class name="PrepareTesting" />
+            <!--<class name="CheckTitle" />
             <class name="FindElement" />
             <class name="FindElements" />
             <class name="Form" />
                 <parameter name="address" value= "abcd@gmail.com" />
                 <parameter name="passwd" value= "abcdefghlkjl" />
+            <class name="RadioCheckBox" />
+            <class name="ImageClick" />
+            <class name="DropDown" />
+            <class name="LinkText" />-->
+            <class name="MouseKeyboardEvent" />
         </classes>
     </test>
 </suite>

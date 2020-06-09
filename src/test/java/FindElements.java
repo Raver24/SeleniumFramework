@@ -17,8 +17,8 @@ public class FindElements {
     @BeforeClass
     public void beforeClass(String browser)
     {
-        if (browser.equalsIgnoreCase("firefox")) driver = new ChromeDriver();
-        else if (browser.equalsIgnoreCase("chrome")) driver = new FirefoxDriver();
+        if (browser.equalsIgnoreCase("firefox")) driver = new FirefoxDriver();
+        else if (browser.equalsIgnoreCase("chrome")) driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
     @Test

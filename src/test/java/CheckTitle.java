@@ -9,18 +9,12 @@ public class CheckTitle {
     private WebDriver driver;
     private String baseUrl;
 
-    @BeforeSuite
-    public void beforeSuite()
-    {
-        System.setProperty("webdriver.chrome.driver","D:\\jars\\chromedriver.exe");
-        System.setProperty("webdriver.gecko.driver","D:\\jars\\geckodriver.exe");
-    }
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(String browser)
     {
-        if (browser.equalsIgnoreCase("firefox")) driver = new ChromeDriver();
-        else if (browser.equalsIgnoreCase("chrome")) driver = new FirefoxDriver();
+        if (browser.equalsIgnoreCase("firefox")) driver = new FirefoxDriver();
+        else if (browser.equalsIgnoreCase("chrome")) driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
@@ -38,12 +32,5 @@ public class CheckTitle {
         Assert.assertEquals(actualTitle, expectedTitle);
 
         driver.close();
-    }
-
-    @AfterSuite
-    public void afterSuite()
-    {
-        System.clearProperty("webdriver.chrome.driver");
-        System.clearProperty("webdriver.gecko.driver");
     }
 }
