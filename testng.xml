@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Projects/SeleniumFramework"><classes/>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="CheckTitle" />
+            <class name="FindElement" />
+            <class name="FindElements" />
+            <class name="Form" />
+                <parameter name="address" value= "abcd@gmail.com" />
+                <parameter name="passwd" value= "abcdefghlkjl" />
+        </classes>
+    </test>
+    <test name="ChromeTest">
+        <parameter name="browser" value= "chrome" />
+        <classes>
+            <class name="CheckTitle" />
+            <class name="FindElement" />
+            <class name="FindElements" />
+            <class name="Form" />
+                <parameter name="address" value= "abcd@gmail.com" />
+                <parameter name="passwd" value= "abcdefghlkjl" />
+        </classes>
+    </test>
+</suite>
