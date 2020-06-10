@@ -11,10 +11,6 @@ public class LinkText {
     private WebDriver driver;
     private String baseUrl;
 
-    public void jsClick(WebElement element){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();",element);
-    }
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(String browser)
@@ -57,7 +53,7 @@ public class LinkText {
             driver.findElement(By.partialLinkText("Outside")).click();
         }
         catch (ElementNotInteractableException e) {
-            jsClick(driver.findElement(By.partialLinkText("Outside")));
+            new JSWebElement(driver).findElement(By.partialLinkText("Outside")).click();
             WebDriverWait wait = new WebDriverWait(driver, 3);
             wait.until(ExpectedConditions.titleIs("Facebook – zaloguj się lub zarejestruj"));
         }

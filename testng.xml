@@ -16,14 +16,17 @@
             <class name="RadioCheckBox" />
             <class name="ImageClick" />
             <class name="DropDown" />
-            <class name="LinkText" />-->
+            <class name="LinkText" />
             <class name="MouseKeyboardEvent" />
+            <class name="UploadAndDownload" />
+            <class name="AlertHandling" />
+            <class name="ReadHTMLTable" />
+            <class name="DynamicTable"></class>-->
         </classes>
     </test>
     <test name="ChromeTest">
         <parameter name="browser" value= "chrome" />
         <classes>
-            <class name="PrepareTesting" />
             <!--<class name="CheckTitle" />
             <class name="FindElement" />
             <class name="FindElements" />
@@ -33,8 +36,12 @@
             <class name="RadioCheckBox" />
             <class name="ImageClick" />
             <class name="DropDown" />
-            <class name="LinkText" />-->
+            <class name="LinkText" />
             <class name="MouseKeyboardEvent" />
+            <class name="UploadAndDownload" />
+            <class name="AlertHandling" />
+            <class name="ReadHTMLTable" />
+            <class name="DynamicTable"></class>-->
         </classes>
     </test>
 </suite>
