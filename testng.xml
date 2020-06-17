@@ -1,47 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="D:/Projects/SeleniumFramework"><classes/>
-    </test>
-    <test name="FirefoxTest">
-        <parameter name="browser" value="firefox" />
+<suite name="All Test Suite" thread-count="3">
+    <parameter name="author" value="Guru99" />
+    <parameter name="searchKey" value="India" />
+    <test verbose="2" preserve-order="true" name="testGuru">
+        <parameter name="searchKey" value="UK" />
         <classes>
-            <class name="PrepareTesting" />
-            <!--<class name="CheckTitle" />
-            <class name="FindElement" />
-            <class name="FindElements" />
-            <class name="Form" />
-                <parameter name="address" value= "abcd@gmail.com" />
-                <parameter name="passwd" value= "abcdefghlkjl" />
-            <class name="RadioCheckBox" />
-            <class name="ImageClick" />
-            <class name="DropDown" />
-            <class name="LinkText" />
-            <class name="MouseKeyboardEvent" />
-            <class name="UploadAndDownload" />
-            <class name="AlertHandling" />
-            <class name="ReadHTMLTable" />
-            <class name="DynamicTable"></class>-->
-        </classes>
-    </test>
-    <test name="ChromeTest">
-        <parameter name="browser" value= "chrome" />
-        <classes>
-            <!--<class name="CheckTitle" />
-            <class name="FindElement" />
-            <class name="FindElements" />
-            <class name="Form" />
-                <parameter name="address" value= "abcd@gmail.com" />
-                <parameter name="passwd" value= "abcdefghlkjl" />
-            <class name="RadioCheckBox" />
-            <class name="ImageClick" />
-            <class name="DropDown" />
-            <class name="LinkText" />
-            <class name="MouseKeyboardEvent" />
-            <class name="UploadAndDownload" />
-            <class name="AlertHandling" />
-            <class name="ReadHTMLTable" />
-            <class name="DynamicTable"></class>-->
+            <class name="tests.restAssured.DeleteRecords"/>
         </classes>
     </test>
 </suite>
